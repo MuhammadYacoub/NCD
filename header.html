@@ -1,5 +1,14 @@
+<div class="header">
+    <!-- <img src="Images/header.jpg" alt="header" class="header" width="100%" height="auto" > -->
+    <picture>
+        <!-- Desktop image -->
+        <source media="(min-width: 768px)" srcset="img/header.png" width="100%" height="auto" >
+
+        <!-- Mobile image -->
+          <img src="img/header.jpg" alt="Header Image" width="100%" height="auto">
+    </picture>
+</div>
 <header class="header">
-<img src="img/header.png" alt="logo" class="headerimage">
     <nav>
         <ul class="sidebar">
             <li onclick="hideSidebar()" class="closebtn"><a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
@@ -10,7 +19,7 @@
             <li><a href="register.php">تسجيل الدخول</a></li>
         </ul> 
         <ul>
-            <li><a href="index.php">الرئيسية</a></li>
+            <li class="hideOnMobile"><a href="index.php">الرئيسية</a></li>
             <li class="hideOnMobile"><a href="about.php">عنا</a></li>
             <li class="hideOnMobile"><a href="contact.php">التواصل</a></li>
             <li class="hideOnMobile"><a href="login.php">خدمات</a></li>
