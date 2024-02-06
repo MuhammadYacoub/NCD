@@ -71,18 +71,23 @@
         } else {
             // Loop through filtered data and create result elements
             data.forEach(item => {
-const resultElement = document.createElement('div');
-                resultElement.classList.add('col-md-4');
+            const resultElement = document.createElement('div');
+                resultElement.classList.add('col-md-3');
                 // Customize the content based on your JSON structure
                 resultElement.innerHTML = `
                 <div class="card m-3 b-2">
-                            <h5 ">${item.name}</h5>
-                            <p">${item.specialty}</p>
+                        <div class = "card-header">
+                        <h5>${item.name}</h5>
+                        </div>
+                        <div class="card-body">
+                        <p"> التخصص :${item.specialty}</p>
                             <!-- <p class="card-text fs-6">${item.type}</p> --> 
                             <p">${item.government}</p>
-    <div class="d-flex justify-content-center">
-                                <button " role="button"  m-3" id="searchButton" onclick="searchOnGoogleMaps('${item.name}')">بحث عن الموقع</button>
-                            </div>
+                        </div>
+                        
+                        <div class=" card-footer d-flex justify-content-center">
+                            <button class="btn btn-outline-primary" role="button"  m-3" id="searchButton" onclick="searchOnGoogleMaps('${item.name}')">بحث عن الموقع</button>
+                        </div>
                 </div>
 
                    <!-- <p>${item.name}, ${item.government}, ${item.specialty}, ${item.type}
