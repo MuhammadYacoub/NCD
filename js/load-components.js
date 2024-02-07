@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
    }
 
    // Load Components
-   loadComponent("header.html", "header-placeholder");
-   loadComponent("sidebar.html", "sidebar-placeholder");
-   loadComponent("hero.html", "hero-placeholder");
-   loadComponent("form.html", "form-section-placeholder");
-   loadComponent("result.html", "result-section-placeholder");
-   loadComponent("footer.html", "footer-placeholder");
-   loadComponent("modal.html", "modal-placeholder");
+   loadComponent("assets/header.html", "header-placeholder");
+   loadComponent("assets/sidebar.html", "sidebar-placeholder");
+   loadComponent("assets/hero.html", "hero-placeholder");
+   loadComponent("assets/form.html", "form-section-placeholder");
+   loadComponent("assets/result.html", "result-section-placeholder");
+   loadComponent("assets/footer.html", "footer-placeholder");
+   loadComponent("assets/modal.html", "modal-placeholder");
    console.log("Components loaded");
 
    // Additional code to trigger data fetching and initial results display

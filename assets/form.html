@@ -20,12 +20,14 @@
                 </select>
             </div>
         </div>
-        <div class="container align-items-center">
+        <div class=" self-align-center">
             <div class="row">
-                <div class="col mb-4">
-                    <label class="my-2 fs-4" for="globalSearch">البحث العام</label>
+                <div class="d-flex flex-column col-sm-3 mb-4">
+                    <!-- <label class="my-2 fs-4" for="globalSearch">البحث العام</label> -->
                     <input type="text" class="form-control" id="globalSearch" placeholder="ابحث هنا">
-                    <button class="btn btn-outline-primary mt-3" type="button" onclick="filterResults()">البحث</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-outline-primary " type="button" onclick="filterResults()">البحث</button>
                 </div>
                 
             </div>

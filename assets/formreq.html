@@ -1,0 +1,108 @@
+<body class="bg-light">
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">نموذج طلب خدمة</h2>
+  
+      <form>
+        <!-- قائمة الخدمات -->
+        <div class="mb-3">
+          <label for="serviceCategory" class="form-label">اختر نوع الخدمة</label>
+          <select class="form-select" id="serviceCategory" required>
+            <option disabled selected value="">اختر تصنيف الخدمة</option>
+            <optgroup label="الفئة الأولى: بطاقة العلاج">
+              <option value="بدل_تالف">استخراج بدل تالف</option>
+              <option value="بدل_فاقد">استخراج بدل فاقد</option>
+              <option value="إعادة_تنشيط">إعادة تنشيط</option>
+            </optgroup>
+            <optgroup label="الفئة الثانية: صرف بدلات">
+              <option value="نفقات_الحج">صرف بدل نفقات الحج</option>
+              <option value="التكافل_الاجتماعي">صرف التكافل الاجتماعي</option>
+              <option value="اعانة_زواج">صرف اعانة زواج</option>
+              <option value="اعانة_زواج_الأبناء">صرف اعانة زواج الأبناء</option>
+              <option value="اعانة_ولادة_قيصرية">صرف اعانة ولادة قيصرية</option>
+              <option value="اعانة_ولادة_طبيعية">صرف اعانة ولادة طبيعية</option>
+            </optgroup>
+            <optgroup label="الفئة الثالثة: إضافة مستفيد">
+              <option value="اضافة_الأبناء">اضافة الأبناء</option>
+              <option value="اضافة_الوالدين">اضافة الوالدين</option>
+            </optgroup>
+          </select>
+        </div>
+  
+        <!-- باقي حقول النموذج حسب نوع الخدمة المختار -->
+  
+        <!-- الإسم -->
+        <div class="mb-3">
+          <label for="name" class="form-label">الإسم</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+  
+        <!-- الدرجة -->
+        <div class="mb-3">
+          <label for="degree" class="form-label">الدرجة</label>
+          <input type="text" class="form-control" id="degree" required>
+        </div>
+  
+        <!-- الفرع -->
+        <div class="mb-3">
+          <label for="branch" class="form-label">الفرع</label>
+          <input type="text" class="form-control" id="branch" required>
+        </div>
+  
+        <!-- القسم -->
+        <div class="mb-3">
+          <label for="department" class="form-label">القسم</label>
+          <input type="text" class="form-control" id="department" required>
+        </div>
+  
+        <!-- رقم الموبايل -->
+        <div class="mb-3">
+          <label for="mobile" class="form-label">رقم الموبايل</label>
+          <input type="tel" class="form-control" id="mobile" required>
+        </div>
+  
+        <!-- زر تحميل النموذج -->
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary" onclick="downloadForm()">تحميل النموذج المطبوع</button>
+        </div>
+  
+        <!-- ملاحظة حول الطباعة والتوقيع -->
+        <p class="text-muted">قم بكتابة المعلومات في النموذج وقم بالتوقيع عليه، ثم قم بالتوقيع باستخدام ختم رسمي.</p>
+  
+        <!-- زر إرسال الطلب -->
+        <button type="submit" class="btn btn-success">إرسال الطلب</button>
+      </form>
+    </div>
+  
+    <!-- ربط السكريبت لتحميل النموذج -->
+    <script>
+      function downloadForm() {
+        // Check if all required fields are filled
+        var serviceCategory = document.getElementById("serviceCategory").value;
+        var name = document.getElementById("name").value;
+        var degree = document.getElementById("degree").value;
+        var branch = document.getElementById("branch").value;
+        var department = document.getElementById("department").value;
+        var mobile = document.getElementById("mobile").value;
+    
+        if (
+          serviceCategory !== "" &&
+          name !== "" &&
+          degree !== "" &&
+          branch !== "" &&
+          department !== "" &&
+          mobile !== ""
+        ) {
+          // Open a new window to download the selected form
+          window.open("/forms/" + serviceCategory + ".jpg", "_blank");
+        } else {
+          // Alert the user to fill in all required fields
+          alert("يرجى ملء جميع الحقول المطلوبة قبل تحميل النموذج.");
+        }
+      }
+    </script>
+    
+  
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" type="module"></script>
+  </body>

@@ -72,12 +72,12 @@
             // Loop through filtered data and create result elements
             data.forEach(item => {
             const resultElement = document.createElement('div');
-                resultElement.classList.add('col-md-3');
+                resultElement.classList.add('col-sm-3');
                 // Customize the content based on your JSON structure
                 resultElement.innerHTML = `
-                <div class="card m-3 b-2">
-                        <div class = "card-header">
-                        <h5>${item.name}</h5>
+                <div class="card m-3 ">
+                    <div class = "card-header text-success fw-bold">
+                        <h5 class="card-title fw-bold text-center fw-bold">${item.name}</h5>
                         </div>
                         <div class="card-body">
                         <p"> التخصص :${item.specialty}</p>
@@ -118,7 +118,7 @@
 
     // Add event listeners to your filter elements
     // Call filterResults() when filters change
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     // Add event listeners to your filter elements
     // Call filterResults() when filters change
     document.getElementById('governorateFilter').addEventListener('change', filterResults);
@@ -149,7 +149,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  // Search on Google Maps
       function searchOnGoogleMaps(query) {
         window.open(`https://www.google.com/maps/search/${query}`, '_blank');
     }
