@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
    loadComponent("assets/result.html", "result-section-placeholder");
    loadComponent("assets/footer.html", "footer-placeholder");
    loadComponent("assets/modal.html", "modal-placeholder");
+   loadComponent("assets/formreq.html", "formreq-section-placeholder");
+
    console.log("Components loaded");
 
    // Additional code to trigger data fetching and initial results display
