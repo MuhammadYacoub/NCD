@@ -169,6 +169,43 @@
       downloadLink.click();
     }
   
+  // Function to handle form submission
+  function sendEmail() {
+    // Gather form data
+    var name = document.getElementById('name').value;
+    var degree = document.getElementById('degree').value;
+    var branch = document.getElementById('branch').value;
+    var department = document.getElementById('department').value;
+    var mobile = document.getElementById('mobile').value;
+    var email = document.getElementById('email').value;
+    var file = document.getElementById('fileInput').files[0];
+
+    // Simple validation (you can enhance this as needed)
+    if (name === '' || degree === '' || branch === '' || department === '' || mobile === '' || email === '' || !file) {
+      alert('يرجى ملء جميع الحقول وتحميل الملف');
+      return;
+    }
+
+    // Log the form data to the console (for testing purposes)
+    console.log('Form Data:');
+    console.log('Name:', name);
+    console.log('Degree:', degree);
+    console.log('Branch:', branch);
+    console.log('Department:', department);
+    console.log('Mobile:', mobile);
+    console.log('Email:', email);
+    console.log('File:', file); // This will log the File object, you may need to handle file uploads differently
+
+    // Now you can proceed with further actions like sending the form data via email or submitting it to a server
+    // Since we're not handling server-side processing yet, we'll stop here
+  }
+
+
+
+
+
+
+
 
 
 
@@ -176,8 +213,6 @@
 
 
     //   jotform
-
-   
   var ifr = document.getElementById("JotFormIFrame-240377567464062");
   if (ifr) {
     var src = ifr.src;
